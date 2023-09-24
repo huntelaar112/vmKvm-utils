@@ -9,18 +9,17 @@ exitval=0
 namescrpit=${0:2}
 
 function help() {
-  echo "Usage: ${namescrpit} [option1] [option2] arg1 arg2
+  echo "Usage: ${namescrpit} <vm_name> <disk_path>
   Note: This script need sudo permission to execute."
   exit ${exitval}
 }
 
-numberArgs="1"
+numberArgs="2"
 [[ ${1} = "-h" || -z ${1} || "$#" -lt ${numberArgs} ]] && {
   echo "Missing arguments."
   help
 }
-source $(which logshell)
-## for log-info, log-error, log-warning, log-run, log-debug, log-step
+
 virtualMachine=${1}
 dataPath=${2}
 
@@ -30,9 +29,6 @@ virsh shutdown ${virtualMachine}
 virsh destroy ${virtualMachine}
 virsh undefine ${virtualMachine}
 rm -rf ${dataPath}
-### Do thing need to do
-
-
 
 done=yes
 
