@@ -7,7 +7,7 @@ Script to deploy kvm virtual machine through commandline &lt;3
 - Deploy a VM:\
     deploy-vm.sh <vm_name> <cpus> <ram(MB)> <disk_path> <netwokr_interface>
 
-- Rm a VM:\
+- Remove a VM:\
     rm-vm.sh <vm_name> <disk_path>
 
 *** docs:
