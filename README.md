@@ -13,3 +13,4 @@ Script to deploy kvm virtual machine through commandline &lt;3
 *** docs:
 - virt-install: https://linux.die.net/man/1/virt-install , https://manpages.ubuntu.com/manpages/trusty/man1/virt-install.1.html
 - debian kvm: https://wiki.debian.org/KVM
+- libvirtd: https://libvirt.org/manpages/libvirtd.html#system-socket-activation
