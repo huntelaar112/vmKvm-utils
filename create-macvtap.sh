@@ -9,7 +9,7 @@ exitval=0
 namescrpit=${0:2}
 
 function help() {
-  echo "Usage: ${namescrpit} <vm_name> <disk_path>
+  echo "Usage: ${namescrpit} <physInterface> <interfaceName>
   Note: This script need sudo permission to execute."
   exit ${exitval}
 }
