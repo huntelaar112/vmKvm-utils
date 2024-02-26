@@ -62,6 +62,9 @@ vmOs=${6}
     --extra-args='console=ttyS0'
 }
 
+
+### --location http://us.archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/ \
+
 #  --extra-args "GRUB_CMDLINE_LINUX_DEFAULT="console=tty0 console=ttyS0,115200n8""
 #   --network network=default \
 #  --noautoconsole
