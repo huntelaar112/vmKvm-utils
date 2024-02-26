@@ -9,7 +9,7 @@ exitval=0
 namescrpit=${0:2}
 
 function help() {
-  echo "Usage: ${namescrpit} <vm_name> <cpus> <ram(MB)> <disk_path> <network_interface> <vmOs/cdrom>
+  echo "Usage: ${namescrpit} <vm_name> <cpus> <ram(MB)> <disk_path> <network_interface> <debian/ubuntu/cdrom>
   Create a VM.
   Note: This script need sudo permission to execute."
   exit ${exitval}
