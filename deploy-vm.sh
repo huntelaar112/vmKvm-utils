@@ -30,7 +30,10 @@ vmDiskPath=${4}
 vmNetWork=${5}
 vmOs=${6}
 
+vmOs="${vmOs:-debian}"
+
 [[ ${vmOs} == "debian" ]] && {
+  echo "Info: Use debian11 image."
   sudo virt-install --virt-type kvm \
     --name "${vmName}" --memory "${vmRam}" \
     --vcpus "${vmCpus}" \
@@ -47,7 +50,7 @@ vmOs=${6}
 }
 
 [[ ${vmOs} == "ubuntu" ]] && {
-  sudo virt-install --virt-type kvm \
+  echo "Info: Use ubuntu20 image."
   sudo virt-install --virt-type kvm \
     --name "${vmName}" --memory "${vmRam}" \
     --vcpus "${vmCpus}" \
@@ -63,8 +66,9 @@ vmOs=${6}
     --extra-args='console=ttyS0'
 }
 
+## can't access base on console
 [[ ! ${vmOs} == "ubuntu" && ! ${vmOs} == "debian" ]] && {
-  echo "Use cdroom: ${vmOs}"
+  echo "Use cdrom image: ${vmOs}"
   sudo virt-install --virt-type kvm \
     --name "${vmName}" --memory "${vmRam}" \
     --vcpus "${vmCpus}" \
