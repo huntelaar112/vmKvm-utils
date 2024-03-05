@@ -14,7 +14,8 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
         ovmf \
         qemu-efi \
         qemu-kvm \
-        tini \
+        tini sudo git \
+        qemu-system libvirt-daemon-system virt-manager \
         && \
     apt-get clean
 
